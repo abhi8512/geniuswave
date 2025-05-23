@@ -2,227 +2,117 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Genius Wave - Unlock Your Brain Power</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NASA Scientist Discovers Edison's 7 Second Brain Trick</title>
+  <meta name="viewport" content="width=1200">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', Arial, sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      padding: 0;
+      min-height: 100vh;
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #222;
-      min-height: 100vh;
-    }
-
-    .split-container {
-      display: flex;
-      min-height: 100vh;
-      background: rgba(255,255,255,0.72);
-      /* For white overlay, so content is readable */
-      backdrop-filter: blur(2px);
-    }
-
-    .left-pane {
-      flex: 1.2;
+      font-family: 'Montserrat', Arial, sans-serif;
+      color: #fff;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      min-width: 320px;
-      padding: 40px 0 0 40px;
-      position: relative;
+      align-items: center;
     }
 
     .logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 40px;
-      /* Keep it top left */
-    }
-
-    .image-wrapper {
-      width: 90%;
-      max-width: 480px;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 6px 32px rgba(40, 80, 255, 0.13);
       margin-top: 40px;
-      background: #fff;
-      cursor: pointer;
-      transition: box-shadow 0.2s, transform 0.2s;
-      border: 2px solid #2d50ff24;
-    }
-
-    .image-wrapper:hover {
-      box-shadow: 0 8px 40px rgba(45, 80, 255, 0.17);
-      transform: scale(1.03);
-    }
-
-    .image-wrapper img {
-      width: 100%;
+      margin-bottom: 24px;
+      max-width: 220px;
+      width: 18vw;
       height: auto;
+      display: block;
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    }
+
+    .main-image {
+      max-width: 450px;
+      width: 35vw;
+      height: auto;
+      margin: 32px 0 12px 0;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(30,30,60,0.24);
+      border: 4px solid rgba(255,255,255,0.16);
+      background: #fff;
       display: block;
     }
 
-    .right-pane {
-      flex: 1;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 360px;
-      padding: 40px 0;
-      box-shadow: -2px 0 16px rgba(0,0,0,0.03);
-    }
-
-    .content {
-      width: 100%;
-      max-width: 350px;
-      margin: 0 auto;
-      text-align: left;
-    }
-
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      color: #2d50ff;
-    }
-
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1.2rem;
-    }
-
-    ul {
-      padding-left: 1.2em;
-      margin-bottom: 1.5rem;
-    }
-
-    ul li {
-      margin-bottom: 0.5em;
-      font-size: 1rem;
-    }
-
-    .cta-form {
-      display: flex;
-      flex-direction: column;
-      gap: 0.7em;
-      margin-bottom: 1em;
-    }
-
-    .cta-form input[type="email"] {
-      padding: 0.9em;
-      border: 1px solid #e0e6f0;
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-      transition: border 0.2s;
-    }
-
-    .cta-form input[type="email"]:focus {
-      border: 1.5px solid #2d50ff;
-    }
-
-    .cta-form button {
-      background: linear-gradient(90deg, #2d50ff, #00c6ff);
-      color: #fff;
+    .title {
+      text-align: center;
+      font-size: 2.7rem;
       font-weight: 700;
-      border: none;
-      border-radius: 8px;
-      padding: 1em;
-      font-size: 1rem;
-      cursor: pointer;
-      box-shadow: 0 2px 16px rgba(45,80,255,0.13);
-      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 1.5px;
+      margin-top: 24px;
+      margin-bottom: 18px;
+      line-height: 1.2;
+      color: #ffe066;
+      text-shadow: 2px 4px 16px rgba(0,0,0,0.28),0 2px 4px #222;
+      text-transform: uppercase;
     }
 
-    .cta-form button:hover {
-      background: linear-gradient(90deg, #00c6ff, #2d50ff);
-      transform: translateY(-2px) scale(1.02);
+    .subtitle {
+      text-align: center;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 26px;
+      letter-spacing: 0.5px;
+      text-transform: capitalize;
     }
 
-    .disclaimer {
-      font-size: 0.93rem;
-      color: #7a7f8d;
-      margin-top: 0.8em;
+    .video-container {
+      width: 720px;
+      max-width: 90vw;
+      aspect-ratio: 16/9;
+      margin: 0 auto 32px auto;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.33);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #222;
     }
 
-    /* Responsive */
     @media (max-width: 900px) {
-      .split-container {
-        flex-direction: column;
-      }
-      .left-pane, .right-pane {
-        min-width: unset;
-        width: 100%;
-        flex: unset;
-        min-height: 260px;
-        box-shadow: none;
-        padding: 30px 0 0 0;
-      }
-      .left-pane {
-        align-items: center;
-        justify-content: flex-start;
-        padding: 30px 0 0 0;
-      }
-      .logo {
-        margin-left: 20px;
-      }
-      .image-wrapper {
-        margin-left: 0;
-      }
+      .logo { max-width: 160px; width: 32vw; }
+      .main-image { max-width: 320px; width: 60vw; }
+      .title { font-size: 2rem; }
+      .video-container { width: 98vw; }
     }
-
-    @media (max-width: 540px) {
-      .content {
-        max-width: 95vw;
-        padding: 0 10px;
-      }
-      h1 {
-        font-size: 1.45rem;
-      }
-      .left-pane {
-        padding: 10px 0 0 0;
-      }
+    @media (max-width: 600px) {
+      .logo { margin-top: 16px; }
+      .title { font-size: 1.3rem; }
+      .subtitle { font-size: 1rem; }
+      .main-image { max-width: 95vw; }
     }
   </style>
 </head>
 <body>
-  <div class="split-container">
-    <!-- Left Side: Logo & Image -->
-    <div class="left-pane">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png" alt="Genius Wave Logo" class="logo">
-      <a href="https://forgeniuswave.com/DSvsl/#aff=boostnet" class="image-wrapper" target="_blank" rel="noopener">
-        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" alt="Boost Your Brain - Genius Wave Offer">
-      </a>
-    </div>
-    <!-- Right Side: Headline, Description, CTA -->
-    <div class="right-pane">
-      <div class="content">
-        <h1>Unlock Your Brain's Full Potential</h1>
-        <p>
-          Discover the breakthrough audio technology that can boost your focus, memory, and mental clarity in just minutes a day.
-        </p>
-        <ul>
-          <li>Scientifically engineered soundtracks</li>
-          <li>Backed by neuroscience</li>
-          <li>Easy to use, instant results</li>
-        </ul>
-        <form class="cta-form" id="signup-form">
-          <input type="email" name="email" placeholder="Enter your email to get started" required>
-          <button type="submit">Get Instant Access</button>
-        </form>
-        <p class="disclaimer">*Results may vary. No spam, unsubscribe anytime.</p>
-      </div>
-    </div>
+  <img src="logo.png" alt="Logo" class="logo">
+  <img src="main-image.jpeg" alt="Main" class="main-image">
+  <div class="title">
+    TOP NASA SCIENTIST<br>
+    <span style="font-size:1.7rem; color:#fff;">discovers</span><br>
+    <span style="font-size:2.1rem;">EDISON'S 7 SECOND BRAIN TRICK</span>
   </div>
-  <script>
-    // Redirect to affiliate link on submit
-    document.getElementById('signup-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      window.location.href = "https://forgeniuswave.com/DSvsl/#aff=boostnet";
-    });
-  </script>
+  <div class="subtitle">
+    Uncover the secret technique that's captivating the science world!
+  </div>
+  <div class="video-container">
+    <!-- Replace below with your video embed or video file -->
+    <!-- Example: Embedded YouTube -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    <!-- Example for self-hosted MP4: -->
+    <!-- <video width="100%" height="100%" controls poster="main-image.jpeg">
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video> -->
+  </div>
 </body>
 </html>
